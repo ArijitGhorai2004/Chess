@@ -1,48 +1,179 @@
-# Flask Chess Engine
+# ♟️ FlaskChess
 
-This is a simple chess engine and web interface created using Flask. The application utilizes chessboard.js and chess.js for the logic of the frontend chessboard, while relying on python-chess for the logic of the backend chessboard. All engine calculations are executed on the backend using Python.
-
-## Features
-
-*   **Interactive Web Interface:** A playable browser-based chessboard served via Flask.
-*   **Custom Chess Engine:** A backend engine built from scratch in Python.
-*   **Advanced Search Algorithms:** Utilizes the Minimax algorithm enhanced with Alpha-Beta pruning to find optimal moves.
-*   **Iterative Deepening:** Calculates moves progressively to manage search depths effectively.
-*   **Position Evaluation:** Evaluates board states using material counting and piece-square tables for strategic positioning.
+A web-based Chess application built with **Python**, **Flask**, and **python-chess**. This project provides an interactive chess interface where players can play games, validate legal moves, and leverage a robust chess engine for game logic.
 
 ---
 
-## Prerequisites and Installation
+## 🚀 Features
 
-To run this application on your local machine, you must install Flask and the python-chess library. 
-
-Open your terminal or command prompt and install the dependencies using Python's module flag to avoid execution policy errors:
-
-1. Install Flask:
-   `python -m pip install flask`
-2. Install Python Chess (with UCI and Gaviota tablebase support):
-   `python -m pip install python-chess[uci,gaviota]`
-
----
-
-## Usage
-
-Once the dependencies are installed, you can start the local web server by executing the main Flask application script. 
-
-Run the following command in your project directory:
-
-`python flask_app.py`
-
-After the server starts, open your web browser and navigate to `http://127.0.0.1:5000/` (or the address provided in your terminal) to view the interface and play against the engine.
+* ♟️ Play chess in your browser
+* ✅ Legal move validation using `python-chess`
+* 🎯 Interactive chessboard
+* ⚡ Fast Flask backend
+* 🔄 Real-time game state updates
+* 🧩 Clean and modular project structure
+* 📱 Responsive web interface
 
 ---
 
-## Project Structure
+## 🛠️ Technologies Used
 
-| File | Description |
-| :--- | :--- |
-| **`flask_app.py`** | The main web server file that handles routing, serves the `index.html` template, and requests moves from the engine. |
-| **`chess_engine.py`** | Contains the `Engine` class, which handles board evaluation, material scoring, and algorithmic search (Minimax, Alpha-Beta, Iterative Deepening). |
-| **`board_test.py`** | A testing script used to initialize a board, print legal moves, and test standard algebraic notation (SAN) moves. |
-| **`.gitignore`** | Specifies intentionally untracked files to ignore (e.g., compiled source files, logs, OS generated files like `.DS_Store`, and editor configurations). |
-| **`readme.txt`** | The original text file containing basic installation instructions and a brief overview of the tech stack. |
+* Python 3.x
+* Flask
+* python-chess
+* HTML5
+* CSS3
+* JavaScript
+
+---
+
+## 📂 Project Structure
+
+```text
+FlaskChess/
+│
+├── flask_app.py          # Main Flask application
+├── chess_engine.py       # Chess engine logic
+├── templates/            # HTML templates
+├── static/               # CSS, JavaScript, images
+├── requirements.txt      # Project dependencies
+└── README.md
+```
+
+---
+
+## ⚙️ Installation
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/<your-username>/FlaskChess.git
+cd FlaskChess
+```
+
+### 2. Create a virtual environment (recommended)
+
+```bash
+python -m venv venv
+```
+
+Activate it:
+
+**Windows**
+
+```bash
+venv\Scripts\activate
+```
+
+**Linux/macOS**
+
+```bash
+source venv/bin/activate
+```
+
+### 3. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+If you don't have a `requirements.txt` yet, install the required packages manually:
+
+```bash
+pip install flask python-chess
+```
+
+### 4. Run the application
+
+```bash
+python flask_app.py
+```
+
+or
+
+```bash
+python -m flask --app flask_app run
+```
+
+Open your browser and visit:
+
+```
+http://127.0.0.1:5000
+```
+
+---
+
+## 🎮 How to Play
+
+1. Launch the Flask server.
+2. Open the application in your web browser.
+3. Move pieces using the chessboard interface.
+4. The application automatically validates legal moves.
+5. Continue playing until checkmate, stalemate, or draw.
+
+---
+
+## 📸 Screenshots
+
+Add screenshots of your application here.
+
+Example:
+
+```
+screenshots/home.png
+screenshots/gameplay.png
+```
+
+---
+
+## 📈 Future Improvements
+
+* 🤖 AI opponent
+* 👥 Multiplayer support
+* ⏱️ Chess timer
+* 📜 Move history
+* ♻️ Undo and redo moves
+* 💾 Save and load games
+* 🌙 Dark mode
+* 📊 PGN and FEN support
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome!
+
+1. Fork the repository
+2. Create a new branch
+
+```bash
+git checkout -b feature-name
+```
+
+3. Commit your changes
+
+```bash
+git commit -m "Add new feature"
+```
+
+4. Push your branch
+
+```bash
+git push origin feature-name
+```
+
+5. Open a Pull Request
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+---
+
+## 👨‍💻 Author
+
+**Arijit Ghorai**
+
+If you found this project useful, consider giving it a ⭐ on GitHub!
